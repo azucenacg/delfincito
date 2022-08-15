@@ -6,26 +6,30 @@ import org.generation.app.entity.Customer;
 
 public interface ICustomerService {
 	/**
-	 * Enlista todos los clientes de la base de datos 
-	 * @return
+	 * Enlista todos los clientes de la base de datos
+	 * @param customer 
+	 * @return Listado de clientes
 	 */
 	public List<Customer> findAllCustomers();
 	/**
 	 * Nos guarda el cliente en la base de datos
-	 * 
-	 * @param customer datos del cliente
-	 * @return devuelve el cliente con el Id asignado
-	 */
-	public Customer save(Customer customer);
+	 * @param customer Datos del cliente
+	 * @return Devuelve el cliente con el Id asignado
+	 */ 
+	public Customer saveCustomer(Customer customer); 
+	
 	/**
-	 * Elimina un cliente en la base de datos
-	 * @param id identificador del cliente a buscar 
+	 * Elimina un cliente de la base de datos
+	 * @param Id identificador del cliente a eliminar
 	 */
-	public void deleteCustomerById(Long id);
+	public Customer deleteCustomerById(Long id);
+	
 	/**
 	 * Encontrar un cliente en la base de datos
-	 * @param id identificador del cliente a buscar 
+	 * @param Id identificador del cliente a buscar
 	 * @return
 	 */
 	public Customer findCustomerById(Long id);
+	
+	
 }
